@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>FiliPizzum — Fili, The Home Baker</title>
 <meta name="google-site-verification" content="1SchAWKacC3DAxDiH8LwTp7AZ_Qd_3ox41B_CcQAOYw"/>
+<title>FiliPizzum — Fili, The Home Baker</title>
 <meta name="description" content="Sono Fili, marito, papà, progettista meccanico e home baker per passione. Creo FiliPizzum CALC, BREADY e condivido tutto quello che so su pizza e pane."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -358,10 +358,10 @@ footer a:hover{color:#fff}
         <div class="contact-arrow">Scrivimi <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
       </a>
 
-      <a href="/cdn-cgi/l/email-protection#17717e7b7e677e6d6d627a57707a767e7b3974787a" class="contact-card reveal d2">
+      <a href="mailto:filipizzum@gmail.com" class="contact-card reveal d2">
         <svg height="26" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#EA4335"/><path d="M4 7l8 6 8-6" stroke="white" stroke-width="1.5" fill="none"/><rect x="4" y="7" width="16" height="11" rx="1" stroke="white" stroke-width="1.5" fill="none"/></svg>
         <div class="contact-handle">Gmail</div>
-        <p class="contact-desc"><span class="__cf_email__" data-cfemail="86e0efeaeff6effcfcf3ebc6e1ebe7efeaa8e5e9eb">[email&#160;protected]</span></p>
+        <p class="contact-desc">filipizzum@gmail.com</p>
         <div class="contact-arrow">Scrivimi <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
       </a>
 
@@ -396,7 +396,7 @@ footer a:hover{color:#fff}
   <p style="margin-top:8px;font-size:11px">© 2025 FiliPizzum · CC BY-NC-ND 4.0</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 window.addEventListener("scroll",function(){
   var p=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;
   document.getElementById("prog").style.width=p+"%";
@@ -408,4 +408,10 @@ document.addEventListener("click",function(e){
   var n=document.getElementById("mobNav");
   if(n.classList.contains("open")&&!n.contains(e.target)&&!e.target.closest(".hamburger"))n.classList.remove("open");
 });
-var io=new IntersectionObserver(functi
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");io.unobserve(e.target)}});
+},{threshold:0.08});
+document.querySelectorAll(".reveal").forEach(function(r){io.observe(r)});
+</script>
+</body>
+</html>
